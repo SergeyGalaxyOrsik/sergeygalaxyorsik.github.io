@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Полина, нажимай на кнопки! ♥</title>
+    <meta name="description" content="Сайт-открытка для Полины. Жми на кнопки и улыбайся!" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="fx-canvas" aria-hidden="true"></canvas>
+
+    <main class="container">
+      <header class="header">
+        <div class="title-wrap">
+          <h1>Полина, это твоя личная открытка</h1>
+          <p class="subtitle">Жми на кнопки — внутри много маленьких сюрпризов ✨</p>
+        </div>
+        <button id="btn-theme" class="chip" aria-label="Переключить тему">Тема</button>
+      </header>
+      
+      <section class="hero">
+        <figure class="hero-photo" id="hero-photo">
+          <img src="./polina.jpg" alt="Полина" />
+        </figure>
+      </section>
+
+      <section class="buttons-grid">
+        <button id="btn-compliment" class="btn">Получить комплимент</button>
+        <button id="btn-surprise" class="btn">Открыть сюрприз</button>
+        <button id="btn-letter" class="btn">Открыть письмо</button>
+        <button id="btn-quiz" class="btn">Мини-опрос</button>
+        <button id="btn-dodge" class="btn btn-dodge">Поймай меня 😊</button>
+        <button id="btn-hearts" class="btn">Кликни сердечки</button>
+        <button id="btn-confetti" class="btn">Конфетти!</button>
+      </section>
+
+      <footer class="footer">
+        <p>Сделано с любовью специально для Полины ♥</p>
+      </footer>
+    </main>
+
+    <div id="modal-backdrop" class="backdrop hidden" aria-hidden="true"></div>
+    <dialog id="modal" class="modal" aria-labelledby="modal-title">
+      <form method="dialog">
+        <header class="modal-header">
+          <h2 id="modal-title">Заголовок</h2>
+          <button class="icon-btn" value="cancel" aria-label="Закрыть">×</button>
+        </header>
+        <div id="modal-content" class="modal-content"></div>
+        <footer class="modal-footer">
+          <button class="btn" value="ok">Окей</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+
+
